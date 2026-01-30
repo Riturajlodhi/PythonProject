@@ -5,6 +5,7 @@
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 print(name,age) """
+from random import setstate
 
 # sorting Lists
 """ def myfunc(n):
@@ -205,3 +206,123 @@ thisset = {"apple","banana","grapes","watermelon"}
 # print(x)
 
 # print(thisset)
+
+# clear() method empties the set
+# thisset.clear()
+# print(thisset)
+
+# Loop sets using for loop
+
+# for x in thisset:
+#     print(x)
+
+# Joining sets
+# Union() method unite two sets together both update and union does the same thing
+# set1 = {"a","b","c"}
+# set2 = {1,2,3}
+# set3 = {"John","Bananas","carrot"}
+
+#
+# set3 = set1.union(set2)
+# print(set3)
+
+# Use | to join two sets
+# set5 = set1 | set2 | set3
+# print(set4)
+
+# Joining a set and a Tuple
+# x = {"a", "b", "c"}
+# y = (1,2,3)
+#
+# z = x.union(y)
+# print(z)
+# Note: The | operator only allows you to join sets with sets, and not with other data types like you can with the union() method.
+
+# Update :- metho inserts all items from one set into
+# print(another)
+#Intersection() method only shows the duplicates
+set1 = {"a","b","c"}
+set2 = {1, 2, 3, "a"}
+
+# set3 = set1.intersection(set2)
+# Using & operator instead of intersection
+# set3 = set1 & set2
+# without using the third variable but will change original set
+# set1.intersection_update(set2)
+# print(set1)
+
+# Difference method - Keep all items from set1 that are not present in set2
+# set3 = set1.difference(set2)
+# using - to join two sets
+# set3 = set1 - set2
+# print(set3)
+
+# difference_update() without using
+# set1.difference_update(set2)
+# print(set1)
+
+# Symmetric_difference() or use ^ operator
+# set3 = set1.symmetric_difference(set2)
+# set3 = set1 ^ set2
+# print(set3)
+
+# symmetric_difference_update() method keep the items that are not present in both setstate
+# set1.symmetric_difference_update(set2)
+# print(set1)
+# removes all the duplicates and returns the rest in the sets
+# Python frozenset - immutable version of a set.
+"""like sets it contains unique,unordered,unchangeable elements
+Unlike sets, elements cannot be added or removed from a frozenset."""
+
+# x = frozenset({"apple","banana","cherry"})
+
+# print(x)
+# print(type(x))
+# isdisjoint() Returns whether two frozensets have an intersection
+
+a = frozenset({1,2})
+# b = frozenset({3,4})
+# print(a.isdisjoint(b))
+# return true none of items are present are present in both sets
+
+# issubset() or <= / <  returns True if this frozenset is a (proper) subset of another
+
+g = frozenset({1,2,6})
+# print(a.issubset(g))
+# print(a <=g)
+# print(a < g)
+# print(g.issuperset(a))
+# print(g > a)
+# print(g >= a)
+
+# Union unites the frozenset without any duplication duplicate values
+# print(a.union(g))
+# print(a | g)
+
+# update() method
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+# x.update(y)
+# x|=y
+# print(x)
+# print(x)
+
+# x.symmetric_difference_update(y)
+# x ^= y
+
+# Using remove or discard method in sets to remove a value from the sets
+# x.remove("banana")
+
+# Using add() method to add items in set
+# x.add("orange")
+# print(x)
+
+# Dictionary use to store key:value pairs
+# Dictionary items are ordered, changeable, and do not allow duplicates
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# print(thisdict)
