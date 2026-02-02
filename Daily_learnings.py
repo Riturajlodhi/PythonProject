@@ -320,9 +320,71 @@ y = {"google", "microsoft", "apple"}
 
 # Dictionary use to store key:value pairs
 # Dictionary items are ordered, changeable, and do not allow duplicates
-# thisdict = {
-#   "brand": "Ford",
-#   "model": "Mustang",
-#   "year": 1964
-# }
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 # print(thisdict)
+
+#Printing the brand value of the dictionary
+# print(thisdict["brand"])
+# Dictionaries are changeable
+# Duplicate values not allowed in Dictionary
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2020
+}
+# print(thisdict)
+
+# using the len function we can measure the length of thee dictionary
+# the class type of dictionary is dict
+
+# The dict() method to make a dictionary:
+# thisdict = dict(name= "Raj", age = 52, country = "africa")
+# print(thisdict)
+
+# get the values of key values using get method
+# print(thisdict.get("model"))
+
+# Get keys
+# x = thisdict.keys()
+# print(x)
+# changing the key values
+# thisdict["brand"]="tata"
+# print(thisdict)
+
+# Get Values
+# print(thisdict.values())
+
+# Adding  a new key value pair
+# x = thisdict.values()
+# print(x) #before the change
+# thisdict["color"] = "red"
+
+# print(x) #after the change
+# print(thisdict)
+
+# Get a list of the key:value
+# print(thisdict.items())
+
+# Check if key exists
+
+# if "color" in thisdict:
+#     print("yes, 'color' is one of the keys in the thisdict dictionary")
+
+# Update Dictionary update()
+# thisdict.update({"color":"black"})
+# print(thisdict)
+
+# Add items
+# thisdict["country"]= "france"
+# print(thisdict)
+
+# using update() method
+# thisdict.update({"color":"violet"})
+# print(thisdict)
+
+# Remove Dictionary Items
