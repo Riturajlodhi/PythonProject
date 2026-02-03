@@ -388,3 +388,107 @@ thisdict = {
 # print(thisdict)
 
 # Remove Dictionary Items
+# using pop() method :-
+
+# thisdict.pop("year")
+# Using del method
+# del thisdict["model"]
+# print(thisdict)
+
+# del method is also used to delete the dictionary
+
+# clear() method empties the dictionary
+
+# Loop Dictionaries
+
+# for x in thisdict:
+#     print(x)
+
+# print(thisdict[x])
+# Using values() method
+
+# Using values method to return values of a dictionary
+# for x in thisdict.values():
+#     print(x)
+
+# Using keys() method to return keys
+# for x in thisdict.keys():
+#     print(x)
+
+# Using items() method to loop through both keys and values:
+# for x,y in thisdict.items():
+#     print(x,y)
+
+# Copy Dictionaries
+mydict = thisdict.copy()
+print(mydict)
+
+# Nested Dictionaries
+"""
+myclass = {
+    "child1" : {
+        "name": "gutla",
+        "year": 2003
+    },
+    "child2" : {
+        "name": "Tabar",
+        "year": 2001
+    },
+    "child3" : {
+        "name": "badnaam",
+        "year": 2011
+    }
+}
+"""
+# print(myclass)
+# or we can create first three different dictionaries and then create a dictionary and put all three in one dictionary
+#
+"""
+class4 = {
+    "name" : "linus",
+    "year" : 2005
+
+}
+class7 = {
+    "name" : "kailash",
+    "age" : 20
+}
+
+myschool = {
+    "class4": class4,
+    "class7": class7
+}
+"""
+# print(myschool)
+
+# loop through Nested Dictionaries
+# using items() method
+
+# Access items in Nested Dictionaries
+# print(myschool["class4"]["year"])
+
+# for x,obj in myschool.items():
+#     print(x)
+#     for y in obj:
+#         print(y + ':', obj[y])
+
+# popitem() - removes the last item
+# class4.popitem()
+# print(class4)
+
+# ___________________________________________________
+# Python Conditions and If statements
+
+# Equals: a == b
+# Not Equals: a != b
+# Less than: a < b
+# Less than or equal to: a <= b
+# Greater than: a > b
+# Greater than or equal to: a >= b
+"""
+# if keyword
+a = 33
+b = 23
+if a > b:
+     print("b is greater than a")
+"""
