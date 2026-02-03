@@ -492,3 +492,173 @@ b = 23
 if a > b:
      print("b is greater than a")
 """
+# Using boolean variable:
+# is_logged_in = True
+# if is_logged_in:
+#     print("Welcome back!")
+
+# Python Elif statement
+"""
+a = 45
+b=56
+if a > b:   
+    print("a is greater than b")
+elif a <= b:
+    print("a is less than or equal to b")
+    """
+
+# Multiple elif conditions
+"""
+score = 75
+
+if score >= 90:
+    print("grade A")
+elif score >= 80:
+    print("grade B")
+elif score >= 70:
+    print("grade c")
+elif score >= 60:
+    print("grade d")
+"""
+# categorizing age groups
+"""
+age = 25
+
+if age < 13:
+    print("You are a child")
+elif age < 20:
+    print("You are a teenager")
+elif age < 65:
+    print("You are an adult")
+elif age >= 65:
+    print("You are a senior")
+"""
+# Python Else Statement
+
+# The else keyword
+"""
+a = 200
+b = 3
+if b>a:
+    print("b is greater than a")
+elif a == b:
+    print("a is equal to b")
+else:
+    print("a is greater than b")
+    
+"""
+num = 7
+if num % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+# _______________
+# conditional_statement
+
+# Check even or odd numbers
+"""
+num = 7
+if num % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+"""
+# temperature = 28
+#
+# if temperature > 30:
+#     print("It's hot outside!")
+# elif temperature > 20:
+#     print("It's warm outside")
+# elif temperature > 10:
+#     print("It's cool outside")
+# else:
+#     print("It's cold outside!")
+
+# Else as fallback
+"""
+username = "apple"
+
+if len(username) > 0:
+    print(f"Welcome, {username}!")
+else:
+    print("Error: Username cannot be empty")
+"""
+# Shorthand if - one line if statement
+a=74
+b=9
+# You still need colon: after the condition
+# if a > b:print("a is greater than b")
+
+# Short Hand If..Else
+# One-line if/else that prints a value:
+# print("A") if a>b else print("B")
+
+# Assign a value with if...else one line if else
+#
+# a = 10
+# b = 20
+# bigger = a if a > b else b
+# print("Bigger is", bigger)
+# variable = value_if_true if condition else value_if_false
+
+# Multiple conditions on One line
+
+# b = 82
+# a = 63
+# print("A") if a > b else print("=") if a==b else print("B")
+"""
+# Finding the maximum of two numbers
+x = 12
+y = 21
+max_value = x if x>y else y
+print("Maximum value:", max_value)
+"""
+# setting a default value
+username = ""
+display_name = username if username else "guest"
+# print("Welcome,", display_name)
+
+# Shorthand is only for quick simple assignment
+
+# Python logical Operators
+"""
+and - Returns True if both statements are true
+or - Returns True if one of the statements is true
+not - Reverses the result, returns False if the result is true
+"""
+# The and Operator
+# a=89
+# b=65
+# c=92
+# if a>b and c>a:
+#     print("both conditions are true")
+
+# The or operator
+"""
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+"""
+# The not Operator
+# a=4
+# b=9
+# if not a > b:
+#     print("a is not greater than b")
+
+# Combining multiple Operators
+"""
+age = 58
+is_student = False
+has_discount_code = True
+
+if (age < 18 or age > 25) and not is_student or has_discount_code:
+    print("Discount applies!")
+
+# not false = true
+Operator Precedence -- parenthesis > not > and > or
+
+"""
+
