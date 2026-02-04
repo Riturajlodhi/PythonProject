@@ -548,10 +548,10 @@ else:
     
 """
 num = 7
-if num % 2 == 0:
-    print("The number is even")
-else:
-    print("The number is odd")
+# if num % 2 == 0:
+    # print("The number is even")
+# else:
+    # print("The number is odd")
 
 # _______________
 # conditional_statement
@@ -661,4 +661,136 @@ if (age < 18 or age > 25) and not is_student or has_discount_code:
 Operator Precedence -- parenthesis > not > and > or
 
 """
+"""
+temperature = 25
+is_raining = False
+is_weekend = True
 
+if (temperature > 20 and not is_raining) or is_weekend:
+    print("Great day for outdoor activities")
+"""
+"""
+username = "Lenovo"
+password = "password"
+is_verified = True
+
+if username and password and is_verified:
+    print("Login successful")
+else:
+    print("Login failed")
+    """
+"""
+# Nested if Statements
+x = 41
+if x > 10:
+    print("Above 10")
+    if x > 20:
+        print("and also above 20!")
+    else:
+        print("but not above 20")
+else:
+  print("You are too young to drive")
+    """
+"""
+score = 85
+attendance = 90
+submitted = True
+
+if score >= 60:
+    if attendance >= 80:
+        if submitted:
+            print("Pass with good standing")
+        else:
+            print("Pass but low attendance")
+    else:
+        print("Pass but low attendance")
+else:
+    print("fail")
+"""
+# a = 32
+# b = 25
+#
+# if a > b:
+#     pass
+#     print("Score processed")
+
+# Pass with multiple Conditions
+# value = 50
+#
+# if value < 0:
+#     print("Negative value")
+# elif value == 0:
+#     pass
+# else:
+#     print("Positive value")
+
+# Python match statement
+"""
+day = 9
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("tuesday")
+    case 3:
+        print("wednesday")
+    case 4:
+        print("thursday")
+    case 5:
+        print("friday")
+    case 6:
+        print("saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("good day")
+        using _ operator as last option 
+        """
+# Combine values
+# Use pipe character | as an or operator in the case evaluation to check for more than one value
+"""
+day = 4
+match day:
+    case 1|2|3|4|5:
+        print("Today is a weekday")
+    case 6|7:
+        print("I love weekends!")
+    case _:
+        print("No match")
+    """
+# Python While loops
+# using break to stop the follow of the loop
+# using continue
+# i = 1
+# while i<10:
+#     print(i)
+#     if i == 3:
+#         break
+#     i += 1
+
+# continue statement -- it will skip 3
+"""
+i = 0
+while i < 6:
+    i += 1
+    if i==3:
+        continue
+    print(i)
+"""
+# the else block will not be executed if the loop is stopped by a break statement
+
+# For loop
+
+fruits = ["apple", "banana","cherry"]
+# for x in fruits:
+#     print(x)
+
+# for x in "banana":
+#     print(x)
+#
+    # The break Statement in for loop
+
+for x in fruits:
+    print(x)
+    if x == "banana":
+        break
