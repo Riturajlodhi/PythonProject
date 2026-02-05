@@ -789,8 +789,163 @@ fruits = ["apple", "banana","cherry"]
 #     print(x)
 #
     # The break Statement in for loop
-
+"""
 for x in fruits:
     print(x)
     if x == "banana":
         break
+
+# the continue statement in for loop
+
+fruits = ["apple","banana","cherry"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
+
+# range() function
+for x in range(6):
+    print(x)
+
+# range(5) means 0 to 4 not o to 5
+
+   # Herer using the start parameter
+for x in range(2,6):
+    print(x)
+
+    # Increment by 3
+for x in range(2,10,3):
+    print(x)
+
+    # Else in for loop
+for x in range(6):
+    if x == 3: break
+    print(x)
+else:
+    print("Finally finished!")
+
+    # Nested for loops
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x,y)
+
+"""
+# sari sari raat aho me bharta
+# for x in [0,1,2]:
+    # pass
+
+# Python Functions
+# a functions is a block of code which only runs when it is called
+# a function can return data as a result
+# a function helps avoiding code repetition
+"""
+# creating a functiom usinf def function
+def my_function():
+ print("Hello from a function")
+ # calling a function
+my_function()
+my_function()
+
+# function name :- start with a letter or underscore
+# a function can only contain letters, numbers, and underscores
+# function names are case sensitive(myFunction and myfunction are different)
+
+temp1 = 77
+celcius1 = (temp1 - 32) * 5/9
+print(celcius1)
+
+temp2 = 95
+celcius2 = (temp2 - 32) * 5/9
+print(celcius2)
+
+# this is the repetition of code but with functions - reusable code
+
+def fahrenheit_to_celcius(fahrenheit):
+    return (fahrenheit - 32)* 5/9
+
+print(fahrenheit_to_celcius(77))
+print(fahrenheit_to_celcius(52))
+
+# Return values
+def greet():
+    return "Hello from function"
+
+message = greet()
+print(message)
+
+def function():
+    pass # no error will come
+
+"""
+# ____________________________________________________
+
+
+# object oriented proprogramimg language in python
+
+# oops used to structure your code - provides structure to your code , make code easier to maintain
+# keep your code dry , allows you to build reusable applications with less code
+
+# Classes and Objects
+
+# class Myclass:
+    # x = 5
+
+# creating object p1 and printing the value of x:
+# p1 = MyClass()
+# print(p1.x)
+
+# delete Objects
+# del p1
+
+# Multiple objects
+# p1 = Myclass()
+# p2 = Myclass()
+# p3 = Myclass()
+#
+# print(p1.x)
+# print(p2.x)
+# print(p3.x)
+
+# the pass statement
+# class person:
+    # pass
+
+# The _init_() Method :-
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# p1 = Person("Rahul", 36)
+# print(p1.name)
+# print(p1.age)
+
+# Creating a class without __init__():
+"""
+class person:
+ pass
+p1 = person()
+p1.name = "swami"
+p1.age = 31
+
+print(p1.name)
+print(p1.age)
+"""
+# Multiple Parameters
+
+class Person:
+    def __init__(self,name,age,city,country):
+        self.name = name
+        self.age = age
+        self.city = city
+        self.country = country
+
+p1 = Person("Linus", 30, "Oslo", "Norway")
+
+print(p1.name)
+print(p1.age)
+print(p1.city)
+print(p1.country)
