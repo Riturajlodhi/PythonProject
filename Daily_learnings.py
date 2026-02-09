@@ -806,6 +806,7 @@ for x in fruits:
 # range() function
 for x in range(6):
     print(x)
+    
 
 # range(5) means 0 to 4 not o to 5
 
@@ -949,3 +950,151 @@ print(p1.name)
 print(p1.age)
 print(p1.city)
 print(p1.country)
+
+# Class Methods
+
+class person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello, my name is" + self.name)
+
+p1 = person(" Emil")
+p1.greet()
+
+# create a method with parameters
+
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+    def multiply(self, a, b):
+        return a * b
+
+calc = Calculator()
+print(calc.add(5,3))
+print(calc.multiply(5,3))
+
+# Methods Accessing Properties
+class pearson:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_info(self):
+        return f"{self.name} is {self.age} years old"
+p1 = pearson("Elvis",51)
+print(p1.get_info())
+
+# Methods that changes a property value
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+  def celebrate_birthday(self):
+    self.age += 1
+    print(f"Happy birthday! You are now {self.age}")
+
+p1 = Person("Linus", 25)
+p1.celebrate_birthday()
+p1.celebrate_birthday()
+
+# The __str__() Method -- method that controlswhat is returned when the object is printed
+# below is the simple program
+class person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def person(self):
+      print(f"{self.name} is {self.age} years old.")
+p1 = person("Emily", 32)
+p1.person()
+
+# without __str__() method when object is printed
+class person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+p1 = person("Emily",34)
+print(p1)
+
+# With the __str__() method:
+class person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name}({self.age})"
+
+p1 = person("Tushar",23)
+print(p1)
+
+# Multiple methods - a class have multiple methods that work together
+
+class playlist:
+    def __init__(self, name):
+        self.name = name
+        self.songs = []
+
+    def add_song(self, song):
+        self.songs.append(song)
+        print(f"Added: {song}")
+
+    def remove_song(self, song):
+        if song in self.songs:
+            self.songs.remove(song)
+            print(f"Removed: {song}")
+
+    def show_songs(self):
+        print(f"Playlist '{self.name}':")
+        for song in self.songs:
+            print(f"- {song}")
+
+my_playlist = playlist("Favorites")
+my_playlist.add_song("Bohemian Rhapsody")
+my_playlist.add_song("Stairway to Heaven")
+my_playlist.show_songs()
+
+# Delete Methods
+# Using del keyword
+class person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello! {self.name}")
+
+p1 = person("Emily")
+
+del person.greet
+
+p1.greet()
+
+# Python Inheritance
+
+# Parent class / Child class inherits from another class
+
+class parent:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+# creating child class
+class child(parent):
+
+# Use the person class to create an object, and then execute the printname method:
+
+x = child("John", "Doe")
+x.printname()
+   # def __init__(self,fname, lname):
+# x = child("ranveer","brar")
+
+# x.printname()
+
