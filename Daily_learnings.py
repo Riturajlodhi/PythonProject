@@ -1003,76 +1003,76 @@ p1.celebrate_birthday()
 
 # The __str__() Method -- method that controlswhat is returned when the object is printed
 # below is the simple program
-class person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    def person(self):
-      print(f"{self.name} is {self.age} years old.")
-p1 = person("Emily", 32)
-p1.person()
-
-# without __str__() method when object is printed
-class person:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-
-p1 = person("Emily",34)
-print(p1)
-
-# With the __str__() method:
-class person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def __str__(self):
-        return f"{self.name}({self.age})"
-
-p1 = person("Tushar",23)
-print(p1)
-
-# Multiple methods - a class have multiple methods that work together
-
-class playlist:
-    def __init__(self, name):
-        self.name = name
-        self.songs = []
-
-    def add_song(self, song):
-        self.songs.append(song)
-        print(f"Added: {song}")
-
-    def remove_song(self, song):
-        if song in self.songs:
-            self.songs.remove(song)
-            print(f"Removed: {song}")
-
-    def show_songs(self):
-        print(f"Playlist '{self.name}':")
-        for song in self.songs:
-            print(f"- {song}")
-
-my_playlist = playlist("Favorites")
-my_playlist.add_song("Bohemian Rhapsody")
-my_playlist.add_song("Stairway to Heaven")
-my_playlist.show_songs()
-
-# Delete Methods
-# Using del keyword
-class person:
-    def __init__(self, name):
-        self.name = name
-
-    def greet(self):
-        print(f"Hello! {self.name}")
-
-p1 = person("Emily")
-
-del person.greet
-
-p1.greet()
+# class person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def person(self):
+#       print(f"{self.name} is {self.age} years old.")
+# p1 = person("Emily", 32)
+# p1.person()
+#
+# # without __str__() method when object is printed
+# class person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#
+# p1 = person("Emily",34)
+# print(p1)
+#
+# # With the __str__() method:
+# class person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def __str__(self):
+#         return f"{self.name}({self.age})"
+#
+# p1 = person("Tushar",23)
+# print(p1)
+#
+# # Multiple methods - a class have multiple methods that work together
+#
+# class playlist:
+#     def __init__(self, name):
+#         self.name = name
+#         self.songs = []
+#
+#     def add_song(self, song):
+#         self.songs.append(song)
+#         print(f"Added: {song}")
+#
+#     def remove_song(self, song):
+#         if song in self.songs:
+#             self.songs.remove(song)
+#             print(f"Removed: {song}")
+#
+#     def show_songs(self):
+#         print(f"Playlist '{self.name}':")
+#         for song in self.songs:
+#             print(f"- {song}")
+#
+# my_playlist = playlist("Favorites")
+# my_playlist.add_song("Bohemian Rhapsody")
+# my_playlist.add_song("Stairway to Heaven")
+# my_playlist.show_songs()
+#
+# # Delete Methods
+# # Using del keyword
+# class person:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def greet(self):
+#         print(f"Hello! {self.name}")
+#
+# p1 = person("Emily")
+#
+# del person.greet
+#
+# p1.greet()
 
 # Python Inheritance
 
@@ -1088,7 +1088,10 @@ class parent:
 
 # creating child class
 class child(parent):
-
+   def __init__(self, fname, lname):
+    # pass
+       super().__init__(fname, lname)
+    #    parent.__init__(self, fname, lname)
 # Use the person class to create an object, and then execute the printname method:
 
 x = child("John", "Doe")
@@ -1098,3 +1101,42 @@ x.printname()
 
 # x.printname()
 
+# ----- Add the __init__() function ---------
+
+# superfunction -- super() will make the child class inherit all
+
+# try except in python even after error the program continues
+"""
+a = input("Enter the number: ")
+print(f"Multiplication table of {a} is:")
+try:
+    for i in range(1, 11):
+        print(f"{int(a)} x {i} = {int(a)*i}")
+except Exception as e:
+    print(e)
+
+print("Some imp lines of code")
+print("End of program")
+"""
+# F-string in python
+# creating an f string adding:.3f will add two decimal zeroes
+#  :, will add comma before zeroes
+"""
+price = 54
+t = f"the price is {price:.2f} rupee"
+print(t)
+"""
+# function that convert feet into meters
+
+def myconverter(x):
+   return x * 0.3048
+
+txt = f"The plane is flying at a {myconverter(30000)} meter altitude"
+print(txt)
+
+# Using String format
+quantity = 4
+itemno = 765
+price = 54
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
