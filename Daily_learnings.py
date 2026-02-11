@@ -1135,8 +1135,74 @@ txt = f"The plane is flying at a {myconverter(30000)} meter altitude"
 print(txt)
 
 # Using String format
-quantity = 4
-itemno = 765
-price = 54
-myorder = "I want {} pieces of item number {} for {:.2f} dollars."
-print(myorder.format(quantity, itemno, price))
+
+# quantity = 4
+# itemno = 765
+# price = 54
+# myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+# print(myorder.format(quantity, itemno, price))
+
+# Python None - is a special constant in python that represents the absence of a value
+
+A = None
+print(A, type(A))
+print(bool(A))
+
+# Python User Input
+
+print("Enter your name:")
+name = input()
+print(f"Hello {name}")
+
+# Validate Input
+
+y = True
+while y == True:
+    x = input("Enter a number:")
+    try:
+      x = float(x);
+      y = False
+    except:
+       print("Wrong input,please try again later")
+
+print("thank you!")
+
+# Python Virtual Environment
+# python -m venv myfirstproject --> to create a virtual environment
+
+# import cowsay
+# cowsay.cow("Good Mooooorning!")
+
+
+#python Json
+
+# Python regex
+# re module offers a set of functions that allows us to search a string for a match
+import re
+txt = "the rain in spain"
+x = re.search("^The.*Spain$",txt)
+
+if x:
+  print("YES! We have a match!")
+else:
+  print("No match")
+
+# findall() function
+txt = "The rain in Spain"
+x = re.findall("ai", txt)
+print(x)
+
+# search() function
+
+import re
+
+txt = "The rain in Spain"
+x = re.search("\S", txt)
+
+print("The first white-space character is located in position:", x.start())
+
+x = re.split("\S", txt)
+print(x)
+
+
+
