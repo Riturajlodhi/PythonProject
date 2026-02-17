@@ -1178,6 +1178,7 @@ print("thank you!")
 
 # Python regex
 # re module offers a set of functions that allows us to search a string for a match
+"""
 import re
 txt = "the rain in spain"
 x = re.search("^The.*Spain$",txt)
@@ -1204,5 +1205,63 @@ print("The first white-space character is located in position:", x.start())
 x = re.split("\S", txt)
 print(x)
 
+# Python Polymorphism
+# using len function
+
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year" : 1964
+}
+
+print(len(thisdict))
+
+# pynative exercise practise
+# Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.
+
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+bus = Vehicle(120,18)
+
+print(f"Vehicle max speed is {bus.max_speed} km/h")
+print(f"Vehicle mileage is {bus.mileage} mpg")
+
+# Create a Vehicle class without any variables and methods
+
+class Behicle:
+    pass
+
+# Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+
+class Vehicle:
+    #class attribute
+    color = "White"
+
+    def __init__(self,name,max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+# bus = Vehicle(120,18)
+    def display_info(self):
+        print(f"Vehicle Information:{self.name}")
+        print(f"Max Speed:{self.max_speed} mph")
+        print(f" Mileage:{self.mileage} mpg")
+        print(f" color:{Vehicle.color} ")
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers.,color:{Vehicle.color}"
+class Bus(Vehicle):
+    pass
+
+school_bus = Bus("force",120,8)
+school_bus.display_info()
+print(school_bus.seating_capacity(50))
+
+
+# print(f"Vehicle max speed is {bus.max_speed} km/h")
+# print(f"Vehicle mileage is {bus.mileage} mpg")
+"""
 
 
